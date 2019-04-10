@@ -28,14 +28,14 @@ try {
             if(count($mahasiswa) > 0) {
                 echo "<h2>Daftar Mahasiswa:</h2>";
                 echo "<table>";
-				echo "<tr><th>NIM</th>";
-                echo "<tr><th>Nama</th>";
+		echo "<tr><th>NIM</th>";
+                echo "<th>Nama</th>";
                 echo "<th>Alamat</th>";
                 echo "<th>Agama</th>";
                 echo "<th>Nomer Telepon</th></tr>";
                 foreach($mahasiswa as $registrant) {
-					echo "<tr><td>".$registrant['nim']."</td>";
-                    echo "<tr><td>".$registrant['nama']."</td>";
+		    echo "<tr><td>".$registrant['nim']."</td>";
+                    echo "<td>".$registrant['nama']."</td>";
                     echo "<td>".$registrant['alamat']."</td>";
                     echo "<td>".$registrant['agama']."</td>";
                     echo "<td>".$registrant['notlp']."</td></tr>";
