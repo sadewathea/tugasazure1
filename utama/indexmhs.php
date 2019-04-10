@@ -21,38 +21,6 @@
     } catch(Exception $e) {
         echo "Failed: " . $e;
     }
-?>
-<table border="0" align="left" cellpadding="0" cellspacing="1" class="tb_admin">
-<tr>
-<th>NIM</th>
-<th>Nama Mahasiswa</th>
-<th>Alamat</th>
-<th>Agama</th>
-<th>No_tlpn</th>
-<th colspan="3">Aksi</th>
-</tr>
-<?php
-$query = "select * from mhs";
-$result = mysql_query($query, $sambung);
-//$no = 0;
-while ($buff = mysql_fetch_array($result)){
-//$no++;
-?>
-<tr>
-<td><?php echo $buff['nim']; ?></td>
-<td><?php echo $buff['nama']; ?></td>
-<td><?php echo $buff['alamat']; ?></td>
-<td><?php echo $buff['agama']; ?></td>
-<td><?php echo $buff['notlpn']; ?></td>
-<td><a href="edit.php?nim=<?php echo $buff['nim']; ?>">Edit</a></td>
-<td><a href="hapus.php?nim=<?php echo $buff['nim']; ?>">Hapus</a></td>
-</tr>
-<?php
-}
-mysql_close($sambung);
-?>
-</table>
-<?php
 try {
             $sql_select = "SELECT * FROM mahasiswa";
             $stmt = $conn->query($sql_select);
@@ -74,7 +42,7 @@ try {
                 }
                 echo "</table>";
             } else {
-                echo "<h3>No one is currently registered.</h3>";
+                echo "<h3>Belum ada data mahasiswa.</h3>";
             }
         } catch(Exception $e) {
             echo "Failed: " . $e;
