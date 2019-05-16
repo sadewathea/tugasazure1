@@ -9,7 +9,7 @@ mysql_select_db($db,$sambung);
 **/
     $host = "hexawebappserver.database.windows.net";
     $user = "hexasoft";
-    $pass = "Iqbal2410";
+    $pass = "iqbal2410";
     $db = "hexawebapp";
 
     try {
